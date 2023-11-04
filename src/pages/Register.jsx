@@ -81,7 +81,7 @@ function Register() {
 
         <>
             <section className='heading'>
-                <h1>Register Your SuperMarket Branch</h1>
+                <h1>Register Here</h1>
             </section>
 
             <section className='form'>
@@ -91,7 +91,27 @@ function Register() {
                                id='name'
                                name='name'
                                value={name}
-                               placeholder='Enter Your Branch Name'
+                               placeholder='First Name'
+                               onChange={onChange}
+                        />
+                    </div>
+
+                    <div className='form-group'>
+                        <input type='text'
+                               id='name'
+                               name='name'
+                               value={name}
+                               placeholder='Last Name'
+                               onChange={onChange}
+                        />
+                    </div>
+
+                    <div className='form-group'>
+                        <input type='text'
+                               id='name'
+                               name='name'
+                               value={name}
+                               placeholder='Phone Number'
                                onChange={onChange}
                         />
                     </div>
@@ -100,7 +120,7 @@ function Register() {
                                id='email'
                                name='email'
                                value={email}
-                               placeholder='Enter Your Email'
+                               placeholder='Email'
                                onChange={onChange}
                         />
                     </div>
@@ -109,7 +129,7 @@ function Register() {
                                id='password'
                                name='password'
                                value={password}
-                               placeholder='Enter Your Password'
+                               placeholder='Password'
                                onChange={onChange}
                         />
                     </div>
