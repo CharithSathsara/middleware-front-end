@@ -19,25 +19,25 @@ function Header() {
     return (
         <header className='header'>
             <div>
-                <Link to='/'>SuperMarket Management System</Link>
+                <Link to='/' style={{fontSize:'40px'}}>Sri Care</Link>
             </div>
             <ul>
                 {user?(
                     <li>
-                        <button className='login-btn' onClick={onLogout}>Logout from Branch</button>
+                        <button className='login-btn' onClick={onLogout} >Logout</button>
                     </li>
                 ):(<>
                     <li>
                         <Link to='/login'>
                             <button type='submit' className='login-btn'>
-                                Login to Branch
+                                Login
                             </button>
                         </Link>
                     </li>
                     <li>
                         <Link to='/register'>
-                            <button type='submit' className='reg-btn'>
-                                Register Branch
+                            <button type='submit' className='reg-btn' style={{marginRight:'-20rem'}}>
+                                Register
                             </button>
                         </Link>
                     </li>
