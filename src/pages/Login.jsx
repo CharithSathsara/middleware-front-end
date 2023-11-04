@@ -72,7 +72,7 @@ function Login() {
     return (
         <>
             <section className='heading'>
-                <h1>Login to Your SuperMarket Branch</h1>
+                <h1>Login Here</h1>
             </section>
 
             <section className='form'>
@@ -84,7 +84,7 @@ function Login() {
                             id='email'
                             name='email'
                             value={email}
-                            placeholder='Please Enter your Branch email'
+                            placeholder='Please Enter your Phone Number'
                             onChange={onChange}
                         />
                     </div>
