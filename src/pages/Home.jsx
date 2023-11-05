@@ -1,6 +1,6 @@
-import {Link, useNavigate} from "react-router-dom";
-import {useSelector} from "react-redux";
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function Home() {
@@ -11,9 +11,9 @@ function Home() {
 
     useEffect(() => {
 
-        if(!user){
-            navigate('/login')
-        }
+        // if(!user){
+        //     navigate('/login')
+        // }
 
     }, [user, navigate])
 

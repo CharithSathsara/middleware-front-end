@@ -18,10 +18,10 @@ import BillingService from "./pages/BillingService";
 import Customers from "./pages/Customers";
 import DataTopUp from "./pages/DataTopUp";
 import Distributors from "./pages/Distributors";
-import DistributorUpdateForm from "./components/distributorComponent/DistributorUpdateForm";
-import Payment from "./pages/Payment";
+// import DistributorUpdateForm from "./components/distributorComponent/DistributorUpdateForm";
 import Expenditures from "./pages/Expenditures";
 import Incomes from "./pages/Incomes";
+import Payment from "./pages/Payment";
 
 function App() {
   return (
