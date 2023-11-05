@@ -1,24 +1,27 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Header from "./components/Header"
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Header from "./components/Header";
 
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import {ToastContainer} from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Products from "./pages/Products";
+import Register from "./pages/Register";
 
 
-import ProductUpdateForm from "./components/productComponents/ProductUpdateForm";
-import Customers from "./pages/Customers";
 import CustomerUpdateForm from "./components/customerComponents/CustomerUpdateForm";
-import Incomes from "./pages/Incomes";
-import IncomeUpdateForm from "./components/incomeComponents/IncomeUpdateForm";
-import Expenditures from "./pages/Expenditures";
+import DistributorUpdateForm from "./components/distributorComponent/DistributorUpdateForm";
 import ExpenditureUpdateForm from "./components/expenditureComponent/ExpenditureUpdateForm";
+import IncomeUpdateForm from "./components/incomeComponents/IncomeUpdateForm";
+import ProductUpdateForm from "./components/productComponents/ProductUpdateForm";
+import BillingService from "./pages/BillingService";
+import Customers from "./pages/Customers";
+import DataTopUp from "./pages/DataTopUp";
 import Distributors from "./pages/Distributors";
 import DistributorUpdateForm from "./components/distributorComponent/DistributorUpdateForm";
 import Payment from "./pages/Payment";
+import Expenditures from "./pages/Expenditures";
+import Incomes from "./pages/Incomes";
 
 function App() {
   return (
@@ -48,7 +51,11 @@ function App() {
                       <Route path='/distributors' element={<Distributors />} />
                       <Route path='/update-distributor/:id' element={<DistributorUpdateForm />} />
 
+
                       <Route path='/payment' element={<Payment />} />
+                      <Route path='/data-top-up' element={<DataTopUp/>} />
+                      <Route path='/billingService' element={<BillingService/>} />
+
                   </Routes>
               </div>
           </Router>
