@@ -18,6 +18,7 @@ import Expenditures from "./pages/Expenditures";
 import ExpenditureUpdateForm from "./components/expenditureComponent/ExpenditureUpdateForm";
 import Distributors from "./pages/Distributors";
 import DistributorUpdateForm from "./components/distributorComponent/DistributorUpdateForm";
+import Payment from "./pages/Payment";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
                       <Route path='/distributors' element={<Distributors />} />
                       <Route path='/update-distributor/:id' element={<DistributorUpdateForm />} />
 
+                      <Route path='/payment' element={<Payment />} />
                   </Routes>
               </div>
           </Router>
