@@ -4,9 +4,9 @@ export default function BillingService() {
   return (
     <>
         <div className='row'>
-            <div><h2>Billing Service</h2></div>
+            <div><h3>Billing Service</h3></div>
             <div className='container border-rounded bg-light col-auto'>
-                <h3>Your Current Bill</h3>
+                <h4>Your Current Bill</h4>
                 <div className=''>
                     <label className='text-left p-1'>Top Up Pay:</label><span>1000</span>
                 <div className=''>
@@ -18,7 +18,7 @@ export default function BillingService() {
             </div>
         </div>
         <div className='border-rounded bg-light w-36 h-28 col'>
-                <h3>Your Past Bill</h3>
+                <h4>Your Past Bill</h4>
                 <div className=''>
                     <label className='text-left p-1'>Top Up Pay:</label><span>1000</span>
                 <div className=''>
@@ -27,15 +27,15 @@ export default function BillingService() {
                 <div className=''>
                     <label className='text-left p-1'>Total:</label><span>1800</span>
                 </div>
-                <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-3">Pay</button>
+                <div className="col-auto">
+                <button type="submit" className="btn btn-primary mb-3">Pay</button>
                 </div>
             </div>
         </div>
         <div className='border-rounded bg-light col'>
-                <h3>Your Total Bill</h3>
+                <h4>Your Total Bill</h4>
                 <div className='col-auto'>
-                    <label className='text-left p-1'>Top Up Pay:</label><span>1000</span>
+                    <label className='text-left font-bold p-1'>Top Up Pay:</label><span>1000</span>
                 <div className='col-auto'>
                     <label className='text-left p-1'>Ring Tone:</label><span>7000</span>
                 </div>
@@ -43,7 +43,7 @@ export default function BillingService() {
                     <label className='text-left p-1'>Total:</label><span>1800</span>
                 </div>
                 <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-3">Pay</button>
+                <button type="submit" className="btn btn-primary mb-3 w-[100px]">Pay</button>
                 </div>
             </div>
         </div>

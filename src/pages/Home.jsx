@@ -22,16 +22,16 @@ function Home() {
             <h1>Welcome to Sri Care Application</h1>
             <br/>
             <br/>
-            <Link to='/serviceactivations'>
+            <Link to='/ServiceActivation'>
                 <button className='card-btn'>Service Activations</button>
             </Link>
-            <Link to='/ringtonepersonalization'>
+            <Link to='/RingTonePersonalization'>
                 <button className='card-btn'>Ring Tone Personalization</button>
             </Link>
             <Link to='/data-top-up'>
                 <button className='card-btn'>Data Top Up</button>
             </Link>
-            <Link to='/billingService'>
+            <Link to='/BillingService'>
                 <button className='card-btn'>View Bills</button>
             </Link>
             {/* <Link to='/expenditures'>
