@@ -1,7 +1,7 @@
 import React from "react";
-import { Link,useNavigate } from 'react-router-dom'
-import {useSelector, useDispatch} from "react-redux";
-import {logout, reset} from "../features/authentication/authSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from 'react-router-dom';
+import { logout, reset } from "../features/authentication/authSlice";
 
 function Header() {
 
@@ -19,25 +19,25 @@ function Header() {
     return (
         <header className='header'>
             <div>
-                <Link to='/'>SuperMarket Management System</Link>
+                <Link to='/'>Sri Care</Link>
             </div>
             <ul>
                 {user?(
                     <li>
-                        <button className='login-btn' onClick={onLogout}>Logout from Branch</button>
+                        <button className='login-btn' onClick={onLogout}>Logout</button>
                     </li>
                 ):(<>
                     <li>
                         <Link to='/login'>
                             <button type='submit' className='login-btn'>
-                                Login to Branch
+                                Login
                             </button>
                         </Link>
                     </li>
                     <li>
                         <Link to='/register'>
                             <button type='submit' className='reg-btn'>
-                                Register Branch
+                                Register
                             </button>
                         </Link>
                     </li>

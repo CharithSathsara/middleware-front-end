@@ -19,24 +19,24 @@ function Home() {
 
     return (
         <>
-            <h1>Welcome to SuperMarket Management System</h1>
+            <h1>Welcome to Sri Care Application</h1>
             <br/>
             <br/>
-            <Link to='/products'>
-                <button className='card-btn'>Go To Products</button>
+            <Link to='/serviceactivations'>
+                <button className='card-btn'>Service Activations</button>
             </Link>
-            <Link to='/customers'>
-                <button className='card-btn'>Go To Customers</button>
+            <Link to='/ringtonepersonalization'>
+                <button className='card-btn'>Ring Tone Personalization</button>
             </Link>
-            <Link to='/distributors'>
-                <button className='card-btn'>Go To Distributors</button>
+            <Link to='/data-top-up'>
+                <button className='card-btn'>Data Top Up</button>
             </Link>
-            <Link to='/incomes'>
-                <button className='card-btn'>Go To Incomes</button>
+            <Link to='/billingService'>
+                <button className='card-btn'>View Bills</button>
             </Link>
-            <Link to='/expenditures'>
+            {/* <Link to='/expenditures'>
                 <button className='card-btn'>Go To Expenditures</button>
-            </Link>
+            </Link> */}
         </>
     )
 
