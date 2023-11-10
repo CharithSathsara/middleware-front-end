@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {toast} from "react-toastify";
-import {login,reset} from "../features/authentication/authSlice";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
+import { login, reset } from "../features/authentication/authSlice";
 
 function Login() {
 
@@ -72,19 +72,19 @@ function Login() {
     return (
         <>
             <section className='heading'>
-                <h1>Login to Your SuperMarket Branch</h1>
+                <h1>Login to Sri Care Application</h1>
             </section>
 
             <section className='form'>
                 <form onSubmit={onSubmit}>
                     <div className='form-group'>
                         <input
-                            type='email'
+                            type='number'
                             className='form-control'
                             id='email'
                             name='email'
                             value={email}
-                            placeholder='Please Enter your Branch email'
+                            placeholder='Please Enter your Phone Number'
                             onChange={onChange}
                         />
                     </div>

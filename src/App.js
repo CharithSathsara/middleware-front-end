@@ -19,9 +19,14 @@ import Customers from "./pages/Customers";
 import DataTopUp from "./pages/DataTopUp";
 import Distributors from "./pages/Distributors";
 // import DistributorUpdateForm from "./components/distributorComponent/DistributorUpdateForm";
+
 import Payment from "./pages/Payment";
+
 import Expenditures from "./pages/Expenditures";
 import Incomes from "./pages/Incomes";
+import Payment from "./pages/Payment";
+import RingTonePersonalisation from "./pages/RingTonePersonalization";
+import ServiceActivation from "./pages/ServiceActivation";
 
 function App() {
   return (
@@ -29,7 +34,7 @@ function App() {
           <Router>
               <div className='container'>
                   <Header/>
-                  <h1>SCS 2208 RAD MERN Project</h1>
+                  <h1>Middleware Assignment</h1>
                   <Routes>
                       <Route path='/login' element={<Login />} />
                       <Route path='/register' element={<Register />} />
@@ -55,6 +60,9 @@ function App() {
                       <Route path='/payment' element={<Payment />} />
                       <Route path='/data-top-up' element={<DataTopUp/>} />
                       <Route path='/billingService' element={<BillingService/>} />
+
+                      <Route path='/serviceActivation' element={<ServiceActivation />} />
+                      <Route path='/ringTonePersonalization' element={<RingTonePersonalisation />} />
 
                   </Routes>
               </div>

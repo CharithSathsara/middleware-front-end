@@ -1,14 +1,13 @@
-import React from "react";
-import {useState, useEffect} from "react";
+import React, { useEffect, useState } from "react";
 //we have to dispatch the register function
-import {useSelector, useDispatch} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 //useSelector => use to select something from state, bring the user, isLoading things
 //useDispatch => dispatch the function
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 //useNavigate => in order to redirect
-import {toast} from "react-toastify";
-import {register, reset } from '../features/authentication/authSlice'
-import Spinner from '../components/Spinner'
+import { toast } from "react-toastify";
+import Spinner from '../components/Spinner';
+import { register, reset } from '../features/authentication/authSlice';
 
 function Register() {
 
@@ -81,17 +80,35 @@ function Register() {
 
         <>
             <section className='heading'>
-                <h1>Register Your SuperMarket Branch</h1>
+                <h1>Register to Sri Care Application</h1>
             </section>
 
             <section className='form'>
                 <form onSubmit={onSubmit}>
+                <div className='form-group'>
+                        <input type='text'
+                               id='name'
+                               name='name'
+                               value={name}
+                               placeholder='Enter Your First Name'
+                               onChange={onChange}
+                        />
+                    </div>
                     <div className='form-group'>
                         <input type='text'
                                id='name'
                                name='name'
                                value={name}
-                               placeholder='Enter Your Branch Name'
+                               placeholder='Enter Your Last Name'
+                               onChange={onChange}
+                        />
+                    </div>
+                    <div className='form-group'>
+                        <input type='number'
+                               id='name'
+                               name='name'
+                               value={name}
+                               placeholder='Enter Your Phone Number'
                                onChange={onChange}
                         />
                     </div>
