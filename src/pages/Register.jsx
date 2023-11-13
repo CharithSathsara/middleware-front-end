@@ -36,7 +36,7 @@ function Register() {
         }
 
         if(isSuccess || user){
-            navigate('/home')
+            navigate('/login')
         }
 
         dispatch(reset())

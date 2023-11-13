@@ -138,6 +138,10 @@ export default function BillingService() {
                     display: showSuccessModal ? 'block' : 'none',
                 }}
             >
+                <div
+                    className="modal-dialog modal-dialog-centered"
+                    role="document"
+                >
                 <div className="modal-content">
                     <div className="modal-body">
                         <h3>Bill Payment Successfully</h3>
@@ -162,6 +166,7 @@ export default function BillingService() {
                             Close
                         </button>
                     </div>
+                </div>
                 </div>
             </div>
         )}
