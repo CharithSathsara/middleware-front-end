@@ -1,12 +1,6 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 import authService from "./authService";
 
-//createAsyncThunk() is a asynchronous function that is going to deal with async data and our backend database
-
-
-//When we are register or login, we get back user data and json web token
-//which we need to access protected routes. so, we get that data and store in local storage
-
 
 //Get user from localStorage
 const user = JSON.parse(localStorage.getItem('user'))
@@ -83,8 +77,8 @@ export const authSlice = createSlice({
             })
             .addCase(login.fulfilled, (state, action) => {
                 state.isLoading = false
-                state.isSuccess = true
-                state.user = action.payload
+                state.isSuccess = action.payload.status === 'FOUND';
+                state.user = action.payload.user
             })
             .addCase(login.rejected, (state, action) => {
                 state.isLoading = false

@@ -2,11 +2,11 @@ import axios from "axios";
 
 //services is for creating the http request and sending the data back
 
-const api_url = '/api/users/'
+const api_url = 'http://localhost:8765/auth/'
 
 //user registration
 const register = async (userData) => {
-    const response = await axios.post(api_url, userData)
+    const response = await axios.post(api_url+'register', userData)
 
     //axios put data into object called data
     if(response.data){
@@ -20,7 +20,6 @@ const register = async (userData) => {
 const login = async (userData) => {
     const response = await axios.post(api_url + 'login', userData)
 
-    //axios put data into object called data
     if(response.data){
         localStorage.setItem('user', JSON.stringify(response.data))
     }

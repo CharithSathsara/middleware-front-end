@@ -9,12 +9,12 @@ function Login() {
 
     //state for the form
     const [formData, setFormData] = useState({
-        email:'',
+        username:'',
         password:''
     })
 
     //de-structure the fields from that
-    const {email, password} = formData;
+    const {username, password} = formData;
     console.log(formData)
 
     //de-structure the form data
@@ -31,7 +31,7 @@ function Login() {
             toast.error("Invalid Login")
         }
 
-        if(isSuccess || user){
+        if(isSuccess ){
             navigate('/home')
         }
 
@@ -39,15 +39,7 @@ function Login() {
     }, [user, isError, isSuccess, message, navigate, dispatch])
 
 
-    //Remember if you set these inputs to state values we need to
-    //take care of the event. so when we type in that fields on change
-    //fires off, and we need to update the state
-    //So, we do that by calling setFormData
-    //setting it to whatever we are typing.
-    //setFormData is a one object
     const onChange = (e) => {
-        //we pass function to set form data
-        //we are setting form data to an object
         setFormData((prevState) => ({
             ...prevState,
             [e.target.name] : e.target.value,
@@ -58,7 +50,7 @@ function Login() {
         e.preventDefault();
 
         const userData = {
-            email,
+            username,
             password
         }
 
@@ -81,9 +73,9 @@ function Login() {
                         <input
                             type='number'
                             className='form-control'
-                            id='email'
-                            name='email'
-                            value={email}
+                            id='username'
+                            name='username'
+                            value={username}
                             placeholder='Please Enter your Phone Number'
                             onChange={onChange}
                         />

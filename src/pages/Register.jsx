@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-//we have to dispatch the register function
 import { useDispatch, useSelector } from "react-redux";
-//useSelector => use to select something from state, bring the user, isLoading things
-//useDispatch => dispatch the function
 import { useNavigate } from "react-router-dom";
-//useNavigate => in order to redirect
+
 import { toast } from "react-toastify";
 import Spinner from '../components/Spinner';
 import { register, reset } from '../features/authentication/authSlice';
@@ -13,13 +10,15 @@ function Register() {
 
     //state for the form
     const [formData, setFormData] = useState({
-        name:'',
+        firstname:'',
+        lastname:'',
+        phone:'',
         email:'',
         password:''
     })
 
     //de-structure the fields from that
-    const {name, email, password} = formData;
+    const {firstname, lastname, phone, email, password} = formData;
     console.log(formData)
 
     //de-structure the form data
@@ -44,12 +43,6 @@ function Register() {
     }, [user, isError, isSuccess, message, navigate, dispatch])
 
 
-    //Remember if you set these inputs to state values we need to
-    //take care of the event. so when we type in that fields on change
-    //fires off, and we need to update the state
-    //So, we do that by calling setFormData
-    //setting it to whatever we are typing.
-    //setFormData is a one object
     const onChange = (e) => {
         //we pass function to set form data
         //we are setting form data to an object
@@ -63,7 +56,9 @@ function Register() {
         e.preventDefault();
 
         const userData = {
-            name,
+            firstname,
+            lastname,
+            phone,
             email,
             password
         }
@@ -87,27 +82,27 @@ function Register() {
                 <form onSubmit={onSubmit}>
                 <div className='form-group'>
                         <input type='text'
-                               id='name'
-                               name='name'
-                               value={name}
+                               id='firstname'
+                               name='firstname'
+                               value={firstname}
                                placeholder='Enter Your First Name'
                                onChange={onChange}
                         />
                     </div>
                     <div className='form-group'>
                         <input type='text'
-                               id='name'
-                               name='name'
-                               value={name}
+                               id='lastname'
+                               name='lastname'
+                               value={lastname}
                                placeholder='Enter Your Last Name'
                                onChange={onChange}
                         />
                     </div>
                     <div className='form-group'>
                         <input type='number'
-                               id='name'
-                               name='name'
-                               value={name}
+                               id='phone'
+                               name='phone'
+                               value={phone}
                                placeholder='Enter Your Phone Number'
                                onChange={onChange}
                         />
